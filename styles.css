@@ -4,6 +4,7 @@ body {
   display: flex;
   height: 100vh;
   overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
 .backgroundimg {
@@ -21,9 +22,39 @@ body {
   object-fit: cover;
 }
 
+.sidebar {
+  width: 200px; /* Adjust the width as needed */
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-container img {
+  width: 80%; /* Adjust the size of the logo */
+  max-width: 120px;
+}
+
+.logo-container h2 {
+  font-family: 'Norse', sans-serif;
+  font-size: 24px;
+  margin-top: 10px;
+  color: white;
+}
+
 .right-section {
-  width: 50vw;
-  margin-left: 50%;
+  width: calc(50vw); /* Adjust based on the sidebar width */
+  margin-left: 50vw;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -82,7 +113,7 @@ body {
 }
 
 .creation-section {
-  text-align: left;
+  text-align: center;
   padding: 20px;
   background-color: #d9d9d9;
   margin-top: auto;
@@ -93,8 +124,8 @@ body {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  color: #ffffff;
   background-color: #596D48;
+  color: white;
 }
 
 .creation-section p {
