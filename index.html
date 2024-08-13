@@ -3,52 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign-up Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
-<form action="https://httpbin.org/post" method="post">Sign up!</form>
-    <fieldset>
-        <legend> Contact Details</legend>
-        <ul>
-            <li>
-                <label for="name">*Name:</label>
-                <input type="text" id="name" name="user_name">
-            </li>
-            <li>
-                <label for="mail">*Email:</label>
-                <input type="email" id="mail" name="user_email">
-            </li>    
-            <li>
-                <label for="age"> *Age:</label>
-                <input type="number" id="age" name="user_age">
-            </li>
-            <li>
-                <label for="msg">Message:</label>
-                <textarea id="msg" name="user_message"></textarea>
-            </li>
+    <div class="backgroundimg">
+        <img src="https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Display Picture">
+    </div>
 
-        </ul>
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
-    </fieldset>
-    <fieldset>
-        <legend> Juice size</legend>
-        <ul required>
-            <li>
-                <input type="radio" id="small" name="juice_size" value="small">
-                <label for="small">Small</label>
-            </li>
-            <li>
-                <input type="radio" id="medium" name="juice_size" value="medium">
-                <label for="medium">Medium</label>
-            </li>
-            <li>
-                <input type="radio" id="large" name="juice_size" value="large">
-                <label for="large">Large</label>
-            </li>
-        </ul>
-    </fieldset>
-</form>   
+    <div class="right-section">
+        <header class="header">
+            <h1>Sign up to this cool blog :D</h1>
+            <p>You <em>know</em> you want to...</p>
+        </header>
+        
+        <div class="content-wrapper">
+            <div class="form-section">
+                <div class="form">
+                    <form action="" method="post">
+                        <p>Let's do this!</p>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstname">*First Name:</label>
+                                <input type="text" id="firstname" name="firstname" placeholder="John" maxlength="25" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">*Last name:</label>
+                                <input type="text" id="lastname" name="lastname" placeholder="Doe" maxlength="25" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">*Email:</label>
+                                <input type="email" id="email" name="email" placeholder="JohnDoe@gmail.com" maxlength="50" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                            </div>
+                            <div class="form-group">
+                                <label for="number">*Phone Number:</label>
+                                <input type="tel" id="number" name="number" placeholder="01234-567890" maxlength="12" required pattern="[0-9]{5}-[0-9]{6}">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">*Password:</label>
+                                <input type="password" id="password" name="password" placeholder="Password" maxlength="25" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmpassword">*Confirm Password:</label>
+                                <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" maxlength="25" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="creation-section">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
 </body>
 </html>
